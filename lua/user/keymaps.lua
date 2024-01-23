@@ -25,7 +25,15 @@ vim.g.maplocalleader = " "
 
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
+-- jump to previous window
 keymap("n", "<Esc><Esc>", ":wincmd p<CR>", opts)
+-- open terminal on right side
+keymap("n", "<F9>", ":vs<CR>:terminal<cr>", opts)
+-- open file explorer on left side
+keymap("n", "<leader>b", ":Lex 20<CR>", opts)                                                                                                                                                              
+-- open current file dir with explorer
+keymap("n", "<leader>B", ":Lex 20 `dirname %`<CR>", opts)
+
 --vim.cmd.set('scrolloff=2')
 --vim.cmd.set('colorcolumn=80')
 vim.cmd([[
